@@ -42,8 +42,11 @@ public:
 
 public:
 
+    qint32 maskWidth(KisDabShape const& shape, qreal subPixelX, qreal subPixelY,
+        const KisPaintInformation& info) const Q_DECL_OVERRIDE;
     qint32 maskHeight(KisDabShape const& shape, qreal subPixelX, qreal subPixelY,
         const KisPaintInformation& info) const Q_DECL_OVERRIDE;
+    QSizeF characteristicSize(KisDabShape const&) const override;
 
     virtual KisFixedPaintDeviceSP paintDevice(const KoColorSpace*,
             KisDabShape const&,
