@@ -78,6 +78,7 @@
 #include "widgets/kis_slider_spin_box.h"
 #include "widgets/kis_cmb_composite.h"
 #include "widgets/kis_widget_chooser.h"
+#include "widgets/kis_color_button.h"
 #include "tool/kis_tool.h"
 #include "kis_signals_blocker.h"
 #include "kis_action_manager.h"
@@ -310,6 +311,8 @@ KisPaintopBox::KisPaintopBox(KisViewManager *view, QWidget *parent, const char *
     m_workspaceWidget->setPopupWidget(new KisWorkspaceChooser(view));
 
     QHBoxLayout* baseLayout = new QHBoxLayout(this);
+    m_colorButton = new KisColorButton(this);
+    baseLayout->addWidget(m_colorButton);
     m_paintopWidget = new QWidget(this);
     baseLayout->addWidget(m_paintopWidget);
     baseLayout->setSpacing(4);

@@ -60,6 +60,7 @@ class KisCompositeOpComboBox;
 class KisWidgetChooser;
 class KisFavoriteResourceManager;
 class KisAction;
+class KisColorButton;
 
 /**
  * This widget presents all paintops that a user can paint with.
@@ -160,8 +161,8 @@ private Q_SLOTS:
     void slotSaveLockedOptionToPreset(KisPropertiesConfigurationSP p);
     void slotDropLockedOption(KisPropertiesConfigurationSP p);
     void slotDirtyPresetToggled(bool);
-    void slotEraserBrushSizeToggled(bool);    
-    void slotEraserBrushOpacityToggled(bool);    
+    void slotEraserBrushSizeToggled(bool);
+    void slotEraserBrushOpacityToggled(bool);
     void slotUpdateSelectionIcon();
 
     void slotLockXMirrorToggle(bool);
@@ -199,6 +200,7 @@ private:
     KisAction*                          m_eraseAction;
     KisAction*                          m_reloadAction;
     KisAction*                          m_disablePressureAction;
+    KisColorButton*                     m_colorButton;
 
     QString             m_currCompositeOpID;
     KisNodeWSP          m_previousNode;
@@ -246,7 +248,7 @@ private:
     bool             m_dirtyPresetsEnabled;
     bool             m_eraserBrushSizeEnabled;
     bool             m_eraserBrushOpacityEnabled;
-    
+
     KisSignalAutoConnectionsStore m_presetConnections;
     KisSignalCompressor m_presetUpdateCompressor;
 };
