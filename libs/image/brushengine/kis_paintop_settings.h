@@ -211,6 +211,8 @@ public:
     void setSavedEraserOpacity(qreal value);
     qreal savedBrushOpacity() const;
     void setSavedBrushOpacity(qreal value);
+    // QColor savedColor() const;
+    // void setSavedColor(QColor color);
 
     QString effectivePaintOpCompositeOp();
 

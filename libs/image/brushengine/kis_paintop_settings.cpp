@@ -315,6 +315,12 @@ void KisPaintOpSettings::setSavedBrushOpacity(qreal value)
     setPropertyNotSaved("SavedBrushOpacity");
 }
 
+// QColor KisPaintOpSettings::savedColor()
+// {}
+
+// void KisPaintOpSettings::setSavedColor(QColor color)
+// {}
+
 QString KisPaintOpSettings::modelName() const
 {
     return d->modelName;
