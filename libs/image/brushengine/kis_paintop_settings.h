@@ -211,8 +211,9 @@ public:
     void setSavedEraserOpacity(qreal value);
     qreal savedBrushOpacity() const;
     void setSavedBrushOpacity(qreal value);
-    // QColor savedColor() const;
-    // void setSavedColor(QColor color);
+
+    QColor savedColor() const;
+    void setSavedColor(QColor color);
 
     QString effectivePaintOpCompositeOp();
 
@@ -276,6 +277,7 @@ protected:
 private:
     struct Private;
     const QScopedPointer<Private> d;
+    QColor color;
 };
 
 typedef KisSharedPtr<KisPaintOpSettings> KisPaintOpSettingsSP;

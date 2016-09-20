@@ -38,7 +38,7 @@
 #include <brushengine/kis_paintop_preset.h>
 #include "kis_paintop_settings_update_proxy.h"
 #include <time.h>
-#include<kis_types.h>
+#include <kis_types.h>
 #include <kis_signals_blocker.h>
 
 #include <brushengine/kis_locked_properties_server.h>
@@ -315,11 +315,15 @@ void KisPaintOpSettings::setSavedBrushOpacity(qreal value)
     setPropertyNotSaved("SavedBrushOpacity");
 }
 
-// QColor KisPaintOpSettings::savedColor()
-// {}
+QColor KisPaintOpSettings::savedColor() const
+{
+    return color;
+}
 
-// void KisPaintOpSettings::setSavedColor(QColor color)
-// {}
+void KisPaintOpSettings::setSavedColor(QColor c)
+{
+    color = c;
+}
 
 QString KisPaintOpSettings::modelName() const
 {
